@@ -6,7 +6,7 @@ public class Student {
 
     //setName()
     public void setName(String name){
-        this.name = name; //P.S. "this" use to declare the attribute "name", not the parameter "name".
+        this.name = name; // P.S. "this" uses to declare the attribute "name", not the parameter "name".
     }
 
     //getName()
@@ -40,6 +40,5 @@ public class Student {
         if(this.score >= 80) return "A";
         else if(this.score >= 70) return "B";
         else if(this.score >= 60) return "C";
-        return "F"; //P.S. If you have to return sth. you don't have to use "else" in this case.
-    }
+        return "F"; // The computer automatically treats the return value as the “else” case.
 }
