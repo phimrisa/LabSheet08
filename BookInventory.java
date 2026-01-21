@@ -12,7 +12,8 @@ public class BookInventory {
 
         for(Book books_ : books) {
             System.out.println(books_.getTitle() + " has " + books_.getTotalBook() + " books, " +
-                    "can borrow" + books_.getAvailableBook() + " books.");
+                    "can borrow " + books_.getAvailableBook() + " books.");
         }
     }
 }
+
