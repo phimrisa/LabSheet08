@@ -39,7 +39,7 @@ public class InventoryMain {
             else{
                 break;
             }
-        }
+        } // End of no.6
 
         System.out.println("END PROGRAM");
     }
