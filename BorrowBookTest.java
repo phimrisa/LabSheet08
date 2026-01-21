@@ -10,11 +10,13 @@ public class BorrowBookTest {
             if(book.getAvailableBook() != 0){
                 book.borrowBook();
                 System.out.println("Borrowed 1 book, available " + book.getAvailableBook() + " books.");
-            } else if(book.getAvailableBook() == 0){
+            } 
+            else if(book.getAvailableBook() == 0){
                 JOptionPane.showMessageDialog(null, "No books available to borrow …",
                         "Warning Message", JOptionPane.WARNING_MESSAGE);
             }
-        } else{
+        } 
+        else{
             JOptionPane.showMessageDialog(null, "END PROGRAM");
         }
     }
