@@ -1,9 +1,9 @@
 import javax.swing.*;
 
-public class ReturnBookTest{
-    public static void main(String[] args){
+public class ReturnBookTest {
+    public static void main(String[] args) {
         Book book = new Book("Java Programming", 5);
-        while(true) {
+        while (true) {
             int confirm = JOptionPane.showConfirmDialog(null, "Do you want to borrow/return book?",
                     "Borrow/Return Book", JOptionPane.YES_NO_OPTION);
 
@@ -14,27 +14,31 @@ public class ReturnBookTest{
                     if (book.getAvailableBook() == 0) {
                         JOptionPane.showMessageDialog(null, "No books available to borrow...",
                                 "Warning Message", JOptionPane.WARNING_MESSAGE);
-                    }
-                    else{
+                    } // There are no books available for borrowing.
+                    else {
                         book.borrowBook();
                         System.out.println("Borrowed 1 books, available " + book.getAvailableBook() + " books.");
                     }
-                }
+                } // Borrow the book.
                 else if (choice == 2) {
-                    book.returnBook();
-                    System.out.println("Return 1 books, available " + book.getAvailableBook() + " books.");
                     if (book.getAvailableBook() == book.getTotalBook()) {
                         JOptionPane.showMessageDialog(null, "Cannot return! All books are already here.",
                                 "Warning Message", JOptionPane.WARNING_MESSAGE);
+                    } // There is no point in returning the books when no books have been borrowed yet.
+                    else {
+                        book.returnBook();
+                        System.out.println("Return 1 books, available " + book.getAvailableBook() + " books.");
                     }
-                }
-                else{
-                    JOptionPane.showMessageDialog(null,"END PROGRAM");
-                }
-            }
-            else{
-                JOptionPane.showMessageDialog(null,"END PROGRAM");
-            }
+                } // Return the book.
+                else {
+                    JOptionPane.showMessageDialog(null, "END PROGRAM");
+                    break;
+                } // The user enters a number other than 1 or 2.
+            } // "Yes" option.
+            else {
+                JOptionPane.showMessageDialog(null, "END PROGRAM");
+                break;
+            } // "No" option.
         }
     }
 }
